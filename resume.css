@@ -1,0 +1,399 @@
+body{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.topnav{
+    width: 100%;
+    background-color:whitesmoke; 
+    overflow: hidden;
+    position: flex;
+}
+
+.topnav a{
+    float: right;
+    text-align: center;
+    padding: 20px 16px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    font: helvetica;
+    color:  black;
+}
+
+.topnav a:hover{
+    background-color:orangered;
+    color: black;
+    opacity: 0.5;
+
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    vertical-align: middle;
+    display: grid;
+    grid-template-columns:500px 975px;
+    grid-template-areas:
+    "header header"
+    "education education"
+    "organizations organizations"
+    "works works"
+    "skills skills"
+    "experience experience";
+}
+
+#headerContainer{
+    grid-area: header;
+    text-align: left;
+    color: transparent;
+    width: auto;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.imgSource{
+    width: 250px;
+    display: block;
+    margin-left: 33%;
+    margin-right: auto;
+    bottom: 50px;
+
+}
+
+.imgSource img{
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    display: block;
+    margin-left: -508px;
+    margin-right: auto;
+    
+}
+
+.headers{
+    /* margin-left: 2.5%;
+    margin-right: 69.5%;
+    margin-top: 5%; */
+    left: 0px;
+    text-align: center;
+    color: black;
+    width: 30%;
+    margin-top: 50px;
+}
+
+.headers h1 {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.profession{
+    color: black;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.content{
+    text-align: center;
+}
+
+.education.overall{
+    margin-left: 2.5%;
+    margin-right: -205.5%;
+    margin-top: -403%;
+    text-align: center;
+    color: black;
+    
+
+}
+
+.education.Label{
+    color: black;
+}
+
+#Education{
+    width: 99%;
+    height: fit-content;
+    margin-left: 1%;
+  
+    justify-content: center;
+    
+    flex-direction: column;
+}
+
+.education.container{
+    width: 99%;
+    display: right;
+    
+    align-items: inherit;
+    flex-direction: row;
+    color: transparent;
+    opacity: 1;
+}
+
+.education.image{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100px;
+    background-color:  white;
+    margin-left: 620px;
+}
+
+.education.image img{
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+}
+
+.education.title{
+    width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 2%;
+    color: black;
+    font: helvetica;
+    margin-left: 213px;
+}
+
+.organizations.overall{
+    margin-left: 2.5%;
+    margin-right: 43.5%;
+    margin-top: 48%;
+    text-align: center;
+    color: black;
+   
+
+}
+
+.organizations.Label{
+    vertical-align: right;
+    text-align: auto;
+    color: black;
+    margin-top: -213%;
+    margin-right: -26px;
+}
+
+#Organizations{
+    width: 99%;
+    height: fit-content;
+    margin-left: 1%;
+  
+    justify-content: center;
+    
+    flex-direction: column;
+}
+
+.organizations.container{
+    width: 99%;
+    display: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.organizations.image{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100px;
+    background-color: #F0EDEE;
+    margin-left: 23%;
+}
+
+.organizations.image img{
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+}
+
+.organizations.title{
+    width: fit-content;
+    overflow: hidden;
+    margin-left: 2%;
+    color: black;
+    font: helvetica;
+    margin-left: -287px
+}
+
+
+.works.overall{
+    position: absolute;
+    right: 33%;
+    top: 60%;
+}
+
+.works.Label{
+    vertical-align: middle;
+    text-align: center;
+    color: black;
+
+}
+
+#Works{
+    height: fit-content;
+}
+
+.works.container{
+    width: 45%;
+}
+
+.works.container.image{
+    height: 360px;
+    width: 640px;
+    border-radius: 19px;
+    background-color: black;
+    margin-left: 48%;
+    
+}
+
+.works.container.image img{
+    height: 360px;
+    width: 640px;
+    overflow: hidden;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.skills.overall {
+    position: absolute;
+    right: 19%;
+    top: 210%;
+}
+
+.skills.Label{
+    color: black;
+    
+}
+
+#Skills{
+    margin-right: 0px;
+}
+
+.skills.container{
+    width: 70%;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: 0px;
+    
+}
+
+.skills.image{
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+    background-color: black;
+    
+}
+
+.skills.image img{
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+}
+
+.skills.title{
+
+    
+}
+
+.experience.overall{
+    position: absolute;
+    right: 28%;
+    top: 155%;
+}
+
+.experience.Label{
+    margin-left: 154px;
+    text-align: left;
+    color: black;
+    margin-bottom: 4%;
+}
+
+#experiences{
+    justify-content: center;
+    margin-left: 50px;
+}
+
+
+
+.experience.container{
+    width: 69%;
+    grid-template-columns: 15% 85%;
+    margin-top:20px;
+    grid-template-areas: 
+    "image job"
+    "image title"
+     
+}
+
+.experience.image{
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+    background-color: black;
+}
+
+.experience.image img{
+    height: 75px;
+    width: 75x;
+    border-radius: 75px;
+
+}
+
+.experience.job{
+    grid-area: job;
+    width: fit-content;
+    margin-top: -4%;
+    margin-left: 50px;
+    color: black;
+}
+
+.experience.title{
+    grid-area: title;
+    width: fit-content;
+    margin-top: -30px;
+    color: black;
+    margin-left: 50px;
+}
+
+#otherLinks{
+    color: orange;
+    font-size: 20px;
+    display: center;
+/*     background-color: black; */
+    margin-bottom: 50px;
+    margin-left: 110px;
+    padding: auto;
+}
+
+#otherLinks a {
+    margin: 10px;
+}
+
+#otherLinks img:hover {
+    opacity: 50%;
+}
+
+.otherlinks:link{
+    color: orange;
+}
+
+.otherlinks:visited{
+    color: blue;
+}
+
+.otherlinks:hover{
+    color: orangered;
+}
+
+

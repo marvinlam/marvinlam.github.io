@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Resume</title>
+        <link rel="stylesheet" href="update.css">
+        <script src="update.js"></script>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a class="loginButton" href="index.html">Resume</a>
+        </div>
+        <div class="container">
+                <div id="headerContainer">
+              
+                </div>
+
+                <div class="educationOverall">
+                    <h1 class="education Label">EDUCATION<hr class="line education"></h1>
+                    <div id="Education">
+                        <div class="education form div">
+                            <form>
+                                <label class="education input label" for="schoolLogoInput">Image URL</label><br>
+                                <input class="education input box" type="text" id="schoolLogoInput"><br>
+                                <label class="education input label" for="schoolInput">School Name</label><br>
+                                <input class="education input box" type="text" id="schoolInput"><br>
+                                <label class="education input label" for="courseInput">Program</label><br>
+                                <input class="education input box" type="text" id="courseInput"><br>
+                                <label class="education input label" for="yearStartInput">Year started</label>
+                                <label class="education input label" for="yearEndInput" id="eduYearEndLabel">Year ended</label><br>
+                                <input class="education input box" type="number" min="1900" max="2099" step="1" id="yearStartInput">
+                                <input class="education input box" type="number" min="1900" max="2099" step="1" id="yearEndInput">
+                                <div id="educationSubmitButton" onclick="addEducation()">Add</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="socialLinks">
+                    <h1 class="socialLinks Label">LINKS</h1>
+                    <label for="githublink">Github</label>
+                    <br>
+                    <input type="text" id="githubinput">
+                    <button id="githubadd">Add</button>
+                    <br>
+                    <label for="twitterlink">Twitter</label>
+                    <br>
+                    <input type="text" id="twitterinput">
+                    <button id="twitteradd">Add</button>
+                    <br>
+                    <label for="instagralink">Instagram</label>
+                    <br>
+                    <input type="text" id="instagraminput">
+                    <button id="instagramadd">Add</button>
+                    <br>
+                    <label for="linkedinlink">Linkedin</label>
+                    <br>
+                    <input type="text" id="linkedininput">
+                    <button id="linkedinadd">Add</button>
+                    <br>
+                    <label for="youtube">Youtube</label>
+                    <br>
+                    <input type="text" id="youtubeinput">
+                    <button id="youtubeadd">Add</button>
+                    
+                </div>
+                <div class="organizations overall">
+                    <h1 class="organizations Label">ORGANIZATIONS<hr class="line organizations"></h1>
+                    <div id="Organizations">
+                        <div class="organization form div">
+                            <form>
+                                <label class="organization input label" for="orgLogoInput">Image URL</label>
+                                <input class="organization input box" type="text" id="orgLogoInput">
+                                <label class="organization input label" for="orgNameInput">Organization Name</label>
+                                <input class="organization input box" type="text" id="orgNameInput">
+                                <label class="organization input label" for="yearStartInputOrg">Year start</label>
+                                <input class="organization input box" type="number" min="1900" max="2099" step="1" id="yearStartInputOrg">
+                                <div id="organizationSubmitButton" onclick="addOrganization()">Add</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="works overall">
+                    <h1 class="works Label">WORKS<hr class="line works"></h1>
+                    <div id="Works">
+                        <div class="work form div">
+                            <label class="work input label" for="workImageInput">Image URL</label>
+                            <input class="work input box" type="text" id="workImageInput">
+                            <div id="workSubmitButton" onclick="addWork()">Add</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="skills overall">
+                    <h1 class="skills Label">SKILLS<hr class="line skills"></h1>
+                    <div id="Skills">
+                        <div class="skills form div">
+                            <form>
+                                <label class="skills input label" for="skillLogoInput">Image URL</label><br>
+                                <input class="skills input box" type="text" id="skillLogoInput"><br>
+                                <label class="skills input label" for="skillNameInput">Skill Title</label><br>
+                                <input class="skills input box" type="text" id="skillNameInput"><br>
+                                <label class="skills input label" for="skillLevelInput">Level</label>
+                                <label class="skills input label" for="yearStartInputSkill" id="skillYearStartLabel">Year start</label><br>
+                                <select class="skills input box" id="skillLevelInput">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="expert">Expert</option>
+                                </select>
+                                <input class="skills input box" type="number" min="1900" max="2099" step="1" id="yearStartInputSkill">
+                                <div id="skillsSubmitButton" onclick="addSkill()">Add</div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="experience overall">
+                    <h1 class="experience Label">EXPERIENCE<hr class="line experience"></h1>
+                    <div id="experiences">
+                        <div class="experience form div">
+                            <form>
+                                <label class="experience input label" for="jobLogoInput">Image URL</label><br>
+                                <input class="experience input box" type="text" id="jobLogoInput"><br>
+                                <label class="experience input label" for="jobNameInput">Job Title</label><br>
+                                <input class="experience input box" type="text" id="jobNameInput"><br>
+                                <label class="experience input label" for="companyNameInput">Company Name</label><br>
+                                <input class="experience input box" type="text" id="companyNameInput"><br>
+                                <label class="experience input label" for="yearStartInputExp">Year Started</label>
+                                <label class="experience input label" for="yearEndInpuExp" id="expYearEndLabel">Year Ended</label><br>
+                                <input class="experience input box" type="number" min="1900" max="2099" step="1" id="yearStartInputExp">
+                                <input class="experience input box" type="number" min="1900" max="2099" step="1" id="yearEndInputExp"><br>
+                                <div id="experienceSubmitButton" onclick="addExp()">Add</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+        <script>
+        function updateHeader(){
+            console.log("updating header");
+            var name = document.getElementById("nameInput").value;
+            var job = document.getElementById("jobInput").value;
+            var about = document.getElementById("aboutInput").value;
+            var image = document.getElementById("imageFaceInput").value;
+
+            if(name != "" && job != "" && about != "" && image != ""){
+                db.collection("Headers").doc("MpXRcRdcoqQIudjYpvml").update({
+                    "about": about,
+                    "name": name,
+                    "profession": job,
+                    "image" : image
+                })
+                .then(function(docRef) {
+                    console.log("Document updated with ID: ", docRef);
+                    location.reload();
+                })
+                .catch(function(error) {
+                    console.error("Error updating document: ", error);
+                    alert("Error in updating Data");
+                });
+            }
+            else{
+                alert("All header fields must have content")
+            }
+        }
+
+        function addEducation(){
+            console.log("Adding Education");
+            var imageInput = document.getElementById("schoolLogoInput").value;
+            var schoolNameInput = document.getElementById("schoolInput").value;
+            var courseInput = document.getElementById("courseInput").value;
+            var yearStartInput = document.getElementById("yearStartInput").value;
+            var yearEndInput = document.getElementById("yearEndInput").value;
+
+            console.log(imageInput);
+
+            if(imageInput != "" && schoolNameInput != "" && courseInput != "" && yearStartInput != "" && yearEndInput != ""){
+            db.collection("Education").add({
+                "Program": courseInput,
+                "School": schoolNameInput,
+                "image": imageInput,
+                "year_start": yearStartInput,
+                "year_end": yearEndInput
+            })
+            .then(function(docRef){
+                console.log("Document added with ID: " + docRef.id);
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+                alert("Error in adding Education");
+            });
+            }
+            else{
+                alert("All education fields must have content")
+            }
+        }
+
+        function addOrganization(){
+            console.log("Adding Organization");
+            var imageInput = document.getElementById("orgLogoInput").value;
+            var orgName = document.getElementById("orgNameInput").value;
+            var yearStart = document.getElementById("yearStartInputOrg").value;
+
+            if(imageInput != "" && orgName != "" && yearStart != ""){
+                db.collection("Organizations").add({
+                    "image": imageInput,
+                    "title": orgName,
+                    "year_start": yearStart
+                })
+                .then(function(docRef){
+                    console.log("Document added with ID: " + docRef.id);
+                    location.reload();
+                })
+                .catch(function(error){
+                    console.error("Error adding document: ", error);
+                    alert("Error in adding Organization");
+                })
+            }
+            else{
+                alert("All Organization fields must have content");
+            }
+        }
+
+        function addWork(){
+            console.log("Adding work");
+            var imageInput = document.getElementById("workImageInput").value;
+
+            if(imageInput != ""){
+                db.collection("Works").add({
+                    "image": imageInput
+                })
+                .then(function(docRef){
+                    console.log("Document added with ID: " + docRef.id);
+                    location.reload();
+                })
+                .catch(function(error){
+                    console.error("Error adding document: ", error);
+                    alert("Error in adding Work");
+                })
+            }
+            else{
+                alert("Image link must be present");
+            }
+        }
+
+        function addSkill(){
+            console.log("Adding work");
+            var imageInput = document.getElementById("skillLogoInput").value;
+            var skillNameInput = document.getElementById("skillNameInput").value;
+            var skillLevelInput = document.getElementById("skillLevelInput").value;
+            var yearInput = document.getElementById("yearStartInputSkill").value;
+
+            if(imageInput != "" && skillNameInput != "" && skillLevelInput != "" && yearInput != ""){
+                db.collection("Skills").add({
+                    "image": imageInput,
+                    "level": skillLevelInput,
+                    "skill": skillNameInput,
+                    "year_start": yearInput
+                })
+                .then(function(docRef){
+                    console.log("Document added with ID: " + docRef.id);
+                    location.reload();
+                })
+                .catch(function(error){
+                    console.error("Error adding document: ", error);
+                    alert("Error in adding Skill");
+                })
+            }
+            else{
+                alert("All skill fields must be present");
+            }
+        }
+
+        function addExp(){
+            console.log("Adding Experience");
+            var imageInput = document.getElementById("jobLogoInput").value;
+            var jobTitle = document.getElementById("jobNameInput").value;
+            var companyName = document.getElementById("companyNameInput").value;
+            var yearStart = document.getElementById("yearStartInputExp").value;
+            var yearEnd = document.getElementById("yearEndInputExp").value;
+            var task1 = document.getElementById("taskInputExp1").value;
+            var task2 = document.getElementById("taskInputExp2").value;
+            var task3 = document.getElementById("taskInputExp3").value;
+            var tasks = [];
+
+            if(task1 != "")
+                tasks.push(task1);
+            if(task2 != "")
+                tasks.push(task2);
+            if(task3 != "")
+                tasks.push(task3);
+
+            if(imageInput != "" && jobTitle != "" && companyName != "" && yearStart != "" && yearEnd != "" && tasks.length>0){
+                db.collection("Experience").add({
+                    "image": imageInput,
+                    "job": jobTitle,
+                    "list": tasks,
+                    "title": companyName,
+                    "year_end": yearEnd,
+                    "year_start": yearStart
+                })
+                .then(function(docRef){
+                    console.log("Document added with ID: " + docRef.id);
+                    location.reload();
+                })
+                .catch(function(error){
+                    console.error("Error adding document: ", error);
+                    alert("Error in adding Skill");
+                })
+            }
+            else{
+                alert("All experience fields and at least 1 task field must have content");
+            }
+        }
+
+        function deleteEducation(id){
+            db.collection("Education").doc(id).delete()
+            .then(function(docRef){
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+                alert("Error in deleting Education");
+            });
+        }
+
+        function deleteOrg(id){
+            db.collection("Organizations").doc(id).delete()
+            .then(function(docRef){
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Error deleting document: ", error);
+                alert("Error in deleting Organization");
+            });
+        }
+
+        function deleteWork(id){
+            db.collection("Works").doc(id).delete()
+            .then(function(docRef){
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Error deleting document: ", error);
+                alert("Error in deleting Organization");
+            });
+        }
+        
+        function deleteSkill(id){
+            db.collection("Skills").doc(id).delete()
+            .then(function(docRef){
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Error deleting document: ", error);
+                alert("Error in deleting Organization");
+            });
+        }
+
+        function deleteExp(id){
+            db.collection("Experience").doc(id).delete()
+            .then(function(docRef){
+                location.reload();
+            })
+            .catch(function(error) {
+                console.error("Error deleting document: ", error);
+                alert("Error in deleting Experience");
+            });
+        }
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDnXUQvPQnYgoa3eA6jg-vu8wuuWaics08",
+            authDomain: "web-resume-a432c.firebaseapp.com",
+            projectId: "web-resume-a432c",
+            storageBucket: "web-resume-a432c.appspot.com",
+            messagingSenderId: "1009380560680",
+            appId: "1:1009380560680:web:f5f78ed5d4411ca92f0a1d",
+            measurementId: "G-73W6ENDDNF"
+        };
+
+        
+        // Initialize Firebase
+        var app = firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var db = firebase.firestore(app)
+
+        db.collection("Headers").get().then((querySnapshot) =>{
+            querySnapshot.forEach((doc) =>{
+                console.log(doc.data())
+                console.log(`  ${doc.data().name}`);
+                console.log(`  ${doc.data().Profession}`);
+                console.log(`  ${doc.data().About}`);
+                console.log(`  ${doc.data().picture}`);
+                render_header(doc.data().picture, doc.data().name, doc.data().Profession, doc.data().About);
+            });
+        });
+
+        db.collection("Education").get().then((querySnapshot) =>{
+            querySnapshot.forEach((doc) =>{
+                console.log(doc.data())
+                console.log(`  ${doc.data().Program}`);
+                console.log(`  ${doc.data().School}`);
+                console.log(`  ${doc.data().image}`);
+                console.log(`  ${doc.data().start}`);
+                console.log(`  ${doc.data().end}`);
+                render_education(doc.id,doc.data().image, doc.data().School, doc.data().Program, doc.data().start, doc.data().end)
+            });
+        });
+
+        db.collection("Organizations").get().then((querySnapshot) =>{
+            querySnapshot.forEach((doc) =>{
+                console.log(doc.data())
+                console.log(`  ${doc.data().image}`);
+                console.log(`  ${doc.data().title}`);
+                console.log(`  ${doc.data().start}`);
+                render_organizations(doc.id,doc.data().image, doc.data().title, doc.data().start)
+            })
+        })
+
+        db.collection("Works").get().then((querySnapshot) =>{
+            querySnapshot.forEach((doc) =>{
+                console.log(doc.data())
+                console.log(`  ${doc.data().images}`);
+                render_works(doc.id,doc.data().image);
+            })
+        })
+
+        db.collection("Skills").get().then((querySnapshot) =>{
+            querySnapshot.forEach((doc) =>{
+                console.log(doc.data())
+                console.log(`  ${doc.data().skill}`);
+                console.log(`  ${doc.data().level}`);
+                console.log(`  ${doc.data().image}`);
+                console.log(`  ${doc.data().start}`);
+                render_skills(doc.id,doc.data().image, doc.data().skill, doc.data().level, doc.data().start);
+            });
+        });
+
+        db.collection("Experience").get().then((querySnapshot) =>{
+            querySnapshot.forEach((doc) =>{
+                console.log(doc.data())
+                console.log(`  ${doc.data().job}`);
+                console.log(`  ${doc.data().image}`);
+                console.log(`  ${doc.data().start}`);
+                console.log(`  ${doc.data().end}`);
+                console.log(`  ${doc.data().title}`);
+                render_experience(doc.id,doc.data().image, doc.data().job, doc.data().title, doc.data().start, doc.data().end);
+            });
+        });
+
+
+        render_links(db);
+
+
+
+        </script>
+    </body>
+</html>
